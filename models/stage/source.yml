@@ -1,0 +1,38 @@
+version: 2
+
+ 
+
+sources:
+
+  - name: src
+
+    database: SOURCEDB
+
+    schema: MK_MALL
+
+    tables:
+
+      - name: lineitems
+
+      - name: customers
+
+      - name: nations
+
+      - name: orders
+
+        loaded_at_field: o_orderdate::timestamp
+
+        freshness:
+
+          warn_after: {count: 6, period: hour}
+
+      - name: regions
+
+      - name: parts
+
+      - name: partsupps
+
+      - name: suppliers
+
+
+
