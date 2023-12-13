@@ -12,3 +12,12 @@ round({{colm}} * 0.93,{{deci}})
 round({{colm}} * 83.37,{{deci}})
 
 {% endmacro %}
+
+{% macro money() -%}
+
+::decimal(16,4)
+
+{%- endmacro %}
+
+
+
