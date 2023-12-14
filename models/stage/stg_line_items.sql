@@ -24,7 +24,11 @@ changed as (
 
         -- ids
 
-        1000 as order_item_id,
+        {{ dbt_utils.surrogate_key(['l_orderkey', 'l_linenumber']) }}
+
+
+
+ as order_item_id,
 
         l_orderkey as order_id,
 
